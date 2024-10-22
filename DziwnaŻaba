@@ -1,0 +1,35 @@
+var bodyX = 200;
+var bodyY = 300;
+var bodyW = 120;
+var bodyZ = 120;
+var faceW = bodyW*2;
+var faceZ = bodyZ*2;
+
+draw = function() {
+    background(207, 254, 255);
+    fill(49, 240, 36);
+    ellipse(bodyX, bodyY, bodyW, bodyZ); // body
+    ellipse(bodyX, bodyY/2, faceW, faceZ); // face
+    fill(0, 0, 0);
+    ellipse(bodyX * 3/5, bodyY * 4/10, bodyW/3, bodyZ/3); //left eye
+    ellipse(bodyX * 7/5, bodyY * 4/10, bodyW/3, bodyZ/3); //right eye
+    fill(230, 255, 0);
+    ellipse(bodyX * 3/5, bodyY * 4/10, bodyW/6, bodyZ/3); //left iris
+    ellipse(bodyX * 7/5, bodyY * 4/10, bodyW/6, bodyZ/3); //right iris
+    fill(255, 0, 0);
+    ellipse(bodyX * 3/5, bodyY * 4/10, bodyW/6, bodyZ/6); //left iris inside
+    ellipse(bodyX * 7/5, bodyY * 4/10, bodyW/6, bodyZ/6); //right iris inside
+    
+    ellipse(bodyX, bodyY * 2/3, bodyW * 5/4, bodyZ/6); //mouth
+    
+    
+    strokeWeight(10);
+    line(bodyX * 7/10, bodyY * 280/300, bodyW * 60/120, bodyZ * 230/120);
+    line(bodyX * 260/200, bodyY * 280/300, bodyW * 340/120, bodyZ * 230/120);
+    line(bodyX * 250/200, bodyY * 340/300, bodyW * 290/120, bodyZ * 380/120);
+    line(bodyX * 150/200, bodyY * 340/300, bodyW * 110/120, bodyZ * 380/120);
+    
+    strokeWeight(1);
+    
+    bodyZ ++;
+};
